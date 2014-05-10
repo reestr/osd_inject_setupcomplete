@@ -48,6 +48,8 @@ Sub injectSetup()
 	objFile.WriteLine "Set objFile = objFSO.OpenTextFile(FileName, 2)"
 	objFile.WriteLine "objFile.WriteLine strNewContents"
 	objFile.WriteLine "objFile.Close"
+	objFile.WriteLine "strScript = Wscript.ScriptFullName"
+	objFile.WriteLine "objFSO.DeleteFile(strScript)"
 	objFile.WriteLine "wscript.quit"
 	objFile.WriteLine "End If"
 	objFile.WriteLine "WScript.Sleep 100"
