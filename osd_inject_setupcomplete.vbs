@@ -88,7 +88,7 @@ Function getTargetDrive()
 		Next
 		'If we don't find setupcomplete.cmd we should exit the script
 		Wscript.Echo "No disks with setupcomplete.cmd on this system found"
-		Wscript.quit
+		Wscript.quit 1
 	End If
 End Function
 
